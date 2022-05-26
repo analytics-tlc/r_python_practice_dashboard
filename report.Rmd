@@ -1,0 +1,273 @@
+---
+title: "R_Python"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: 
+      version: 4
+      bootswatch: spacelab
+    orientation: columns
+    navbar:
+          - { icon: "fa-envelope", href: "mailto:research@tlc.nyc.gov? subject=Metrics Book Feedback", align: right }
+    vertical_layout: scroll
+---
+
+```{r r_setup, include=FALSE, message=FALSE}
+#import R libraries here
+
+library(scales)
+library(flexdashboard)
+library(htmltools)
+library(lubridate)
+library(data.table)
+library(dplyr)
+library(highcharter)
+library(RODBC)
+library(leaflet)
+library(leaflet.extras)
+library(raster)
+library(rgdal)
+library(DT)
+library(stringi)
+library(rgeos)
+library(tidyr)
+library(readxl)
+library(reshape2)
+library(janitor)
+library(DBI)
+library(odbc)
+library(icons)
+library(reticulate)
+```
+
+
+```{python python_setup, include=FALSE, message=FALSE}
+#import python libraries here
+
+import pandas
+
+```
+
+
+
+```{r phillip_base_code}
+
+#variable example. Prefix every variable with your name to avoid naming conflicts
+
+phillip_x = c('test','test1')
+
+```
+
+```{r nikita_base_code}
+#variable example. Prefix every variable with your name to avoid naming conflicts
+
+nikita_x = c('test2','test3')
+
+
+```
+
+```{python john_base_code}
+#variable example. Prefix every variable with your name to avoid naming conflicts
+
+john_x = ['test4','test5']
+
+
+```
+
+```{python chris_base_code}
+#variable example. Prefix every variable with your name to avoid naming conflicts
+
+chris_x = ['test6','test7']
+
+
+```
+
+
+
+
+
+
+
+Overview
+===
+
+Column
+-----------------------------------------------------------------------
+
+<div style='display:flex; flex-direction:row; justify-content:space-evenly; align-items:center;'>
+
+<div>
+
+<p style="font-size:30pt;font-family: fantasy; font-weight: bolder; color:orange;">
+R_Python_Test
+<span style="font-size:15pt;color:#05b705">
+(`r Sys.Date()`)
+</span>
+</p>
+
+Creating a dashboard using R and Python within one file
+
+<p>
+
+</div>
+
+<div style = 'margin:20px; padding: 5px; width:50%'>
+
+```{r penguin 30, echo = F, out.width = '50%', fig.align='center'}
+knitr::include_graphics("images/pen.png")
+```
+
+
+</div>
+
+
+
+
+</div>
+
+
+---
+
+<div style='display:flex; flex-direction:row; justify-content:space-evenly; align-items:center;'>
+
+
+
+<div>
+
+Phillip
+
+</div>
+
+
+<div>
+
+### box
+
+```{r}
+valueBox(paste('Updated'), paste('Data was updated on',Sys.Date()), icon='', color = 'orange')
+```
+
+</div>
+
+</div>
+
+
+
+---
+
+<div style='display:flex; flex-direction:row; justify-content:space-evenly; align-items:center;'>
+
+
+
+<div>
+
+Nikita
+
+</div>
+
+
+<div>
+
+### box
+
+```{r}
+valueBox(paste('Updated'), paste('Data was updated on',Sys.Date()), icon='', color = 'orange')
+```
+
+</div>
+
+</div>
+
+
+
+---
+
+<div style='display:flex; flex-direction:row; justify-content:space-evenly; align-items:center;'>
+
+
+
+<div>
+
+John
+
+</div>
+
+
+<div>
+
+### box
+
+```{r}
+valueBox(paste('Updated'), paste('Data was updated on',Sys.Date()), icon='', color = 'orange')
+```
+
+</div>
+
+</div>
+
+
+
+---
+
+<div style='display:flex; flex-direction:row; justify-content:space-evenly; align-items:center;'>
+
+
+
+<div>
+
+Chris
+
+</div>
+
+
+<div>
+
+### box
+
+```{r}
+valueBox(paste('Updated'), paste('Data was updated on',Sys.Date()), icon='', color = 'orange')
+```
+
+</div>
+
+</div>
+
+
+
+---
+
+
+
+Phillip
+===
+
+```{r}
+
+
+print(phillip_x)
+
+
+```
+
+
+Nikita
+===
+```{r}
+
+print(nikita_x)
+
+```
+
+John
+===
+
+```{python}
+print(john_x)
+```
+
+Chris
+===
+
+
+```{python}
+print(chris_x)
+```
