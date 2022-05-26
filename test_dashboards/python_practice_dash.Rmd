@@ -1,0 +1,34 @@
+---
+title: "python_practice_dash"
+output: html_document
+---
+
+```{r, setup}
+library(reticulate)
+```
+
+Create variable `x` in Python below:
+
+```{python}
+x = [1, 2, 3]
+```
+
+Access Python variable `x` in following R chunk:
+
+```{r}
+
+py$x
+```
+
+Creating new variable `y` in Python session using R, then passing data frame to `y`
+
+```{r}
+
+py$y <- head(cars)
+
+```
+
+```{python}
+print(y)
+
+```
